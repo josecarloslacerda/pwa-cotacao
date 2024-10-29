@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="manifest" href="../manifest.json" />
+    <title>Gestão de Despesas em Viagens</title>
+  </head>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("../service-worker.js")
+        .then((registration) => {
+          // console.log("Service Worker registrado com sucesso:", registration);
+        })
+        .catch((error) => {
+          console.error("Erro ao registrar o Service Worker:", error);
+        });
+    }
+  </script>
+  <body>
+    <header class="header bg-primary text-white text-center py-3">
+      <h1 class="mt-2">Gestão de Despesas em Viagens</h1>
+    </header>
+    <div class="container mt-5">
+      <div class="form-group row mt-5">
+        <div class="col-md-4"><input type="text" class="form-control" id="input-descricao" placeholder="Descrição do Item"/></div>
+        <div class="col-md-2"><input type="number" class="form-control" id="input-quantidade" placeholder="Quantidade"/></div>
+        <div class="col-md-2"><input type="number" class="form-control" id="input-valor" placeholder="Valor"/></div>
+        <div class="col-md-2">
+          <select id="select-moeda-de" class="form-control">
+            <option value="BRL">BRL</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+          </select>
+        </div>   
+        <div class="col-md-2">
+          <select id="select-moeda-para" class="form-control">
+            <option value="BRL">BRL</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+          </select>
+
+        </div>
+      </div>
+      <div class="text-center md-5">
+        <button id="button-adicionar" class="btn btn-primary btn-block">
+          Adicionar
+        </button>
+      </div>
+
+      <div id="result" class="mt-4">
+          <div id="listagem" class="container">
+          </div>
+          <div id="div-total-moeda-origem" class="text-center"></div> 
+          <div id="div-total-moeda-destino" class="text-center"></div> 
+      </div>
+    </div>
+    
+      
+    </div>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

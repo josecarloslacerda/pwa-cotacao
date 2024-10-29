@@ -1,0 +1,16 @@
+{
+  "name": "Gestão de Despesas em Viagens",
+  "short_name": "Despesas App",
+  "description": "Gestão de Despesas em Viagens",
+  "start_url": "src/",
+  "background_color": "#ffffff",
+  "theme_color": "#007BFF",
+  "icons": [
+      {
+        "src": "./image/icons/icon-512x512.png",
+        "type": "image/png", 
+        "sizes": "512x512"
+      }
+  ],
+  "display": "standalone"
+}
