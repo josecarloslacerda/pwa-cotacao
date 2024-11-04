@@ -18,6 +18,16 @@ buttonAdicionar.addEventListener("click", async () => {
         return false;
     }
 
+    if (selectMoedaDe === '0') {
+        alert('Selecione uma Moeda de Origem');
+        return false;
+    }
+
+    if (selectMoedaPara === '0') {
+        alert('Selecione uma Moeda de Destino');
+        return false;
+    }
+
     if (selectMoedaDe === selectMoedaPara) {
         alert('Selecione moedas diferentes');
         return false;
@@ -121,6 +131,6 @@ function limparCampos(){
     document.getElementById("input-descricao").value = '';
     document.getElementById("input-quantidade").value = '';
     document.getElementById("input-valor").value = '';
-    document.getElementById("select-moeda-de").value = 'BRL';
-    document.getElementById("select-moeda-para").value = 'BRL';
+    document.getElementById("select-moeda-de").value = '0';
+    document.getElementById("select-moeda-para").value = '0';
 }
